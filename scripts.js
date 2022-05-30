@@ -1,4 +1,11 @@
-let hands = ["rock", "paper", "scissors"]
+const choiceRock = document.getElementById("rock")
+const choicePaper = document.getElementById("paper")
+const choiceScissors = document.getElementById("scissors")
+
+choiceRock.addEventListener("click", function(){rock()})
+choicePaper.addEventListener("click", function(){paper()})
+choiceScissors.addEventListener("click", function(){scissors()})
+
 
 function randomGenerator () {
     let number = Math.floor(Math.random() * 3) + 1
