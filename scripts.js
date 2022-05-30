@@ -18,7 +18,7 @@ function randomGenerator () {
     }
 }
 
-let playerChoice = document.getElementById("choice")
+let playerChoice = document.getElementById("result")
 
 function rock() {
     let computerChoice = randomGenerator()
