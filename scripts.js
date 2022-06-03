@@ -1,6 +1,17 @@
 const choiceRock = document.getElementById("rock")
 const choicePaper = document.getElementById("paper")
 const choiceScissors = document.getElementById("scissors")
+const compChoiceRock = document.getElementById("comp-rock")
+const compChoicePaper = document.getElementById("comp-paper")
+const compChoiceScissors = document.getElementById("comp-scissors")
+const round = document.getElementById("round-el")
+const playerScore = document.getElementById("player-score")
+const compScore = document.getElementById("comp-score")
+
+
+let roundCounter = 1
+let playerScoreCounter = 0
+let compScoreCounter = 0
 
 choiceRock.addEventListener("click", function(){rock()})
 choicePaper.addEventListener("click", function(){paper()})
@@ -16,6 +27,10 @@ function randomGenerator () {
     }else {
         return "scissors"
     }
+
+    round.textContent += roundCounter
+    playerScore.textContent += playerScoreCounter
+    compScore.textContent += `Score ${compScoreCounter}`
 }
 
 let playerChoice = document.getElementById("result")
@@ -27,9 +42,9 @@ function rock() {
         playerChoice.textContent += " Tie Game"
     } else if (computerChoice === "paper"){
         playerChoice.textContent += " I Win!"
-} else {
-    playerChoice.textContent += " You Win!"
-}}
+    } else {
+        playerChoice.textContent += " You Win!"
+    }}
 
 function paper() {
     let computerChoice = randomGenerator()
